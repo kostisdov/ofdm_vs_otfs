@@ -3,7 +3,7 @@
 Preprint + reproducible simulation code for a like-for-like comparison of **OFDM**
 and **OTFS** on doubly dispersive (high-mobility) channels.
 
-**Thesis.** The inter-carrier-interference (ICI) floor that doubly dispersive
+The inter-carrier-interference (ICI) floor that doubly dispersive
 channels impose on OFDM can be removed by a *banded, multi-tap frequency-domain
 equalizer whose order is set adaptively from the delay–Doppler channel estimate*.
 The band follows the Doppler (mobility), and the coefficients follow the fast

@@ -22,8 +22,7 @@ coding over OFDM.
 
 ```
 ofdm_vs_otfs/
-├── paper/               LaTeX source, compiled PDF, and the four figures
-│   ├── main.tex
+├── paper/               compiled preprint (PDF) and the four figures
 │   ├── main.pdf
 │   ├── cases_jakes.png      (Fig. 1)
 │   ├── ber_eps03.png        (Fig. 2a)
@@ -73,11 +72,9 @@ python run_waveforms.py --frames 150 --eps_max 1.2 --snr 0 1 2 3 4 5 6 8 --out b
 python run_pulse.py --frames 60 --out pulse_shaping.png
 ```
 
-Copy the resulting PNGs into `paper/` and rebuild the PDF:
-
-```bash
-cd ../paper && pdflatex main.tex && pdflatex main.tex
-```
+The compiled preprint is provided as [`paper/main.pdf`](paper/main.pdf); the
+commands above regenerate the four figures it contains (compare them against the
+`paper/*.png` in this repo).
 
 ## Method notes
 

@@ -12,6 +12,9 @@ env/
 code/*.png
 code/*.pdf
 
+# ---- LaTeX source (kept local, not shared; only the PDF + figures are published) ----
+paper/*.tex
+
 # ---- LaTeX build artifacts ----
 paper/*.aux
 paper/*.log

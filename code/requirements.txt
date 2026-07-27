@@ -1,0 +1,4 @@
+numpy>=1.23
+scipy>=1.9
+matplotlib>=3.6
+scikit-commpy>=0.8   # only for run_ber.py --code cc (convolutional-code path)

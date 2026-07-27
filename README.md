@@ -5,8 +5,8 @@ and **OTFS** on doubly dispersive (high-mobility) channels.
 
 **Thesis.** The inter-carrier-interference (ICI) floor that doubly dispersive
 channels impose on OFDM can be removed by a *banded, multi-tap frequency-domain
-equalizer whose order is set adaptively from the delay–Doppler channel estimate*
-— the band follows the Doppler (mobility), the coefficients follow the fast
+equalizer whose order is set adaptively from the delay–Doppler channel estimate*.
+The band follows the Doppler (mobility), and the coefficients follow the fast
 fading. Under identical coding and interleaving, this receiver comes **within
 about 1 dB of a delay–Doppler OTFS detector at roughly two orders of magnitude
 lower equalizer complexity**. A matched-complexity study and an FDE-OTFS
@@ -52,8 +52,8 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Only `numpy`, `scipy`, and `matplotlib` are needed for the three paper figures;
-`scikit-commpy` is used solely by `run_ber.py --code cc`.
+Only `numpy`, `scipy`, and `matplotlib` are needed for the three paper figures.
+`scikit-commpy` is used only by `run_ber.py --code cc`.
 
 ## Reproducing the figures
 
@@ -61,18 +61,18 @@ Run from `code/`. These are Monte-Carlo simulations with dense linear algebra, s
 each command takes on the order of **10–30 min** on a laptop.
 
 ```bash
-# Fig. 1 — matched-complexity OFDM vs OTFS (Jakes/TDL, eps=0.2)
+# Fig. 1: matched-complexity OFDM vs OTFS (Jakes/TDL, eps=0.2)
 python compare_cases.py --frames 100 --snr 0 2 4 6 8 --out cases_jakes.png
 
-# Fig. 2 — four receivers on realistic 3GPP-TDL-C, mild and severe Doppler
+# Fig. 2: four receivers on realistic 3GPP-TDL-C, mild and severe Doppler
 python run_waveforms.py --frames 150 --eps_max 0.3 --snr 0 1 2 3 4 5 6 8 --out ber_eps03.png
 python run_waveforms.py --frames 150 --eps_max 1.2 --snr 0 1 2 3 4 5 6 8 --out ber_eps12.png
 
-# Fig. 3 — pulse shaping / spectral containment
+# Fig. 3: pulse shaping / spectral containment
 python run_pulse.py --frames 60 --out pulse_shaping.png
 ```
 
-The compiled preprint is provided as [`paper/main.pdf`](paper/main.pdf); the
+The compiled preprint is provided as [`paper/main.pdf`](paper/main.pdf). The
 commands above regenerate the four figures it contains (compare them against the
 `paper/*.png` in this repo).
 
@@ -87,7 +87,7 @@ commands above regenerate the four figures it contains (compare them against the
 - **Matched-complexity comparison.** `compare_cases.py` / `run_waveforms.py`
   write every waveform as a unitary precoding of the same circular time-domain
   signal (`r = Gt · A · x`), so OFDM, FDE-OTFS, and DD-OTFS differ only in the
-  precoder and the equalizer band — an apples-to-apples cost/performance test.
+  precoder and the equalizer band, an apples-to-apples cost/performance test.
 
 ## Citation
 

@@ -165,8 +165,6 @@ def main():
             ax.set_title(cases[case]); ax.set_xlabel('SNR [dB]')
             ax.grid(True, which='both', alpha=0.3); ax.legend()
         axes[0].set_ylabel('Coded BER')
-        fig.suptitle(f'OFDM vs OTFS, matched-complexity equalizers '
-                     f'(Jakes/TDL, $\\epsilon$={eps:.2f}, {args.scs_khz}kHz SCS)')
         fig.tight_layout()
         fig.savefig(args.out, dpi=130)
         print(f"\nSaved figure to {args.out}")

@@ -102,3 +102,7 @@ cd ../paper && pdflatex main.tex && pdflatex main.tex
   year   = {2026}
 }
 ```
+
+## License
+
+Released under the [MIT License](LICENSE).

@@ -6,7 +6,7 @@ and **OTFS** on doubly dispersive (high-mobility) channels.
 The inter-carrier-interference (ICI) floor that doubly dispersive
 channels impose on OFDM can be removed by a *banded, multi-tap frequency-domain
 equalizer whose order is set adaptively from the delay–Doppler channel estimate*.
-The band follows the Doppler (mobility), and the coefficients follow the fast
+The band follows the Doppler, and the coefficients follow the fast
 fading. Under identical coding and interleaving, this receiver comes **within
 about 1 dB of a delay–Doppler OTFS detector at roughly two orders of magnitude
 lower equalizer complexity**. A matched-complexity study and an FDE-OTFS
